@@ -4,6 +4,7 @@ main: clean venv run
 clean:
 	rm -rf venv
 	rm -rf __pycache__
+	rm -rf .mypy_cache
 
 venv:
 	python3.11 -m venv venv
@@ -11,6 +12,9 @@ venv:
 
 mypy: venv
 	./venv/bin/mypy src/main.py
+
+pylint: venv
+	./venv/bin/pylint src/main.py
 
 
 run:
