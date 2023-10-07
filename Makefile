@@ -1,11 +1,8 @@
 
-
-
 main: clean venv run
 
 clean:
 	rm -rf venv
-	rm -rf build/*
 	rm -rf __pycache__
 
 venv:
