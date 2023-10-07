@@ -12,6 +12,7 @@ venv:
 
 mypy: venv
 	./venv/bin/mypy src/main.py
+	./venv/bin/mypy tests/test_main.py
 
 pylint: venv
 	./venv/bin/pylint src/main.py

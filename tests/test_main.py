@@ -8,7 +8,7 @@ sys.path.append(project_root)
 import src.main
 
 
-def test_get_html_content():
+def test_get_html_content() -> None:
     """Test get_html_content function"""
     websites = ["https://google.com", "https://yandex.com/", ]
 
@@ -17,4 +17,4 @@ def test_get_html_content():
 
 
 if __name__ == '__main__':
-    print(test_get_html_content())
+    test_get_html_content()
