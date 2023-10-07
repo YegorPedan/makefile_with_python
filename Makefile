@@ -15,6 +15,10 @@ mypy: venv
 
 pylint: venv
 	./venv/bin/pylint src/main.py
+	./venv/bin/pylint tests/test_main.py
+
+pytest: venv
+	./venv/bin/pytest tests/test_main.py
 
 
 run:
