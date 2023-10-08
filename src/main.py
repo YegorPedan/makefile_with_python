@@ -18,6 +18,16 @@ def get_html_content(url: str) -> Optional[str]:
         return None
 
 
+def ping_site(url: str) -> Optional[int]:
+    """Just try to ping site and return the status"""
+    try:
+        response = requests.get(url, timeout=2)
+        return response.status_code
+    except requests.exceptions.RequestException as e:
+        print(f'Failed to ping {url}, because of {e}')
+    return None
+
+
 if __name__ == "__main__":
     result = get_html_content("http://google.com")
     if isinstance(result, str):

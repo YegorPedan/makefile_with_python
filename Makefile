@@ -1,10 +1,11 @@
 
-main: clean venv run
+main: clean venv mypy pylint pytest run
 
 clean:
 	rm -rf venv
 	rm -rf __pycache__
 	rm -rf .mypy_cache
+	rm -rf .pytest_cache
 
 venv:
 	python3.11 -m venv venv
