@@ -1,5 +1,5 @@
 
-main: clean venv mypy pylint pytest run
+all: clean venv mypy pylint pytest run
 
 clean:
 	rm -rf venv

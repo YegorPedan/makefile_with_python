@@ -16,5 +16,12 @@ def test_get_html_content() -> None:
         assert src.main.get_html_content(website) is not None
 
 
+def test_ping_site() -> None:
+    """Test ping_site function"""
+    assert src.main.ping_site("https://google.com") == 200
+    assert src.main.ping_site("https://github.com/Valll-v/BoysJobsds") == 404
+
+
 if __name__ == '__main__':
     test_get_html_content()
+    test_ping_site()
